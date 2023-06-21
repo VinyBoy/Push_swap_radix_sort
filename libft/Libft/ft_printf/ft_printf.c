@@ -6,7 +6,7 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:17:54 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/24 13:43:50 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:36:50 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,4 @@ int	ft_printf(const char *str, ...)
 //     printf("%s%d\n", "Bangbang", 43);
 // 	ft_printf("%s vuv %d", "Bangbang", num);
 // 	ft_printf("%c", c);
-
-
 // }

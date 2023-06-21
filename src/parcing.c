@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parcing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viny <viny@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:14:13 by vnieto-j          #+#    #+#             */
-/*   Updated: 2023/06/20 15:03:49 by viny             ###   ########.fr       */
+/*   Updated: 2023/06/21 13:47:44 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_exit_error(void)
 {
-		ft_printf("Error\n");
-		exit(EXIT_FAILURE);
+	ft_printf("Error\n");
+	exit(EXIT_FAILURE);
 }
 
 void	add_to_stack(t_nb **stack, int the_nb)

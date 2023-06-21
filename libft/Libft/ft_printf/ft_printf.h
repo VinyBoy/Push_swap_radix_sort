@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viny <viny@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:17:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/06/08 14:50:07 by viny             ###   ########.fr       */
+/*   Updated: 2023/06/21 15:35:52 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef FT_PRINTF_H
+#ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 # include <unistd.h>
@@ -36,7 +36,7 @@ int			ft_print_unsigned_nbr(unsigned int n);
 int			ft_hex_len(unsigned	int num);
 void		ft_put_hex(unsigned int num, const char format);
 int			ft_print_hex(unsigned int num, const char format);
-int     	ptrbase(unsigned long num, char *base, int *len);
+int			ptrbase(unsigned long num, char *base, int *len);
 int			put_ptr(void *ptr);
 
 #endif

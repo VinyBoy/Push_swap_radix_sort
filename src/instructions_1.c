@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   instructions_1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viny <viny@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 18:44:07 by viny              #+#    #+#             */
-/*   Updated: 2023/06/20 14:58:35 by viny             ###   ########.fr       */
+/*   Updated: 2023/06/21 15:41:11 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	swap(t_nb **stack, char c)
 	t_nb	*temp;
 
 	if (!*stack || !(*stack)->next)
+		return ;
 	temp = (*stack)->next;
 	(*stack)->next = temp->next;
 	temp->next = (*stack);

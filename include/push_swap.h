@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viny <viny@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:24:05 by viny              #+#    #+#             */
-/*   Updated: 2023/06/20 15:24:57 by viny             ###   ########.fr       */
+/*   Updated: 2023/06/21 13:47:25 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 
 typedef struct s_nb
 {
-	int		nb;
-	int		index;
+	int			nb;
+	int			index;
 	struct s_nb	*next;
 }	t_nb;
 

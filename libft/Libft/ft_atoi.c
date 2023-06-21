@@ -6,7 +6,7 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:44:48 by vnieto-j          #+#    #+#             */
-/*   Updated: 2023/04/27 17:29:03 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:37:16 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ int	ft_atoi(const char *TheString)
 	return (resultat * signe);
 }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int main()
-{
-	printf("%d\n", ft_atoi("--5+4"));
-	printf("%d\n", atoi("--5+4"));
+// int main()
+// {
+// 	printf("%d\n", ft_atoi("--5+4"));
+// 	printf("%d\n", atoi("--5+4"));
 
-}
+// }

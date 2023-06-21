@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viny <viny@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:41:18 by vnieto-j          #+#    #+#             */
-/*   Updated: 2023/06/20 15:24:45 by viny             ###   ########.fr       */
+/*   Updated: 2023/06/21 15:39:13 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-   while (*s1 != '\0' && *s2 != '\0'  && *s1 == *s2) {
-      s1++;
-      s2++;
-   }
-   return *s1 - *s2;
+	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }
 
 int	ft_atoi_ovrflw(const char *string)
@@ -33,13 +34,13 @@ int	ft_atoi_ovrflw(const char *string)
 	if (*string == '-' || *string == '+')
 	{
 		if (*string == '-')
-			signe *= - 1;
+			signe *= -1;
 		string++;
 	}
 	while (*string >= '0' && *string <= '9')
 	{
-		if (res > INT_MAX / 10 || (res == INT_MAX / 10 
-			&& (*string - '0') > INT_MAX % 10))
+		if (res > INT_MAX / 10 || (res == INT_MAX / 10
+				&& (*string - '0') > INT_MAX % 10))
 			ft_exit_error();
 		res = res * 10 + (*string - '0');
 		string++;
@@ -49,7 +50,7 @@ int	ft_atoi_ovrflw(const char *string)
 
 void	print_stack(t_nb **stack_a)
 {
-	int 	i;
+	int		i;
 	t_nb	*temp;
 
 	i = 1;
@@ -62,14 +63,13 @@ void	print_stack(t_nb **stack_a)
 	}
 }
 
-
 void	put_index_stack(t_nb **stack_a)
 {
 	t_nb	*temp;
 	t_nb	*stock_small;
-	int 	i;
+	int		i;
 	int		s_nb;
-	
+
 	i = 0;
 	while (1)
 	{
@@ -78,7 +78,7 @@ void	put_index_stack(t_nb **stack_a)
 		s_nb = INT_MAX;
 		put_index_stack_index(temp, &stock_small, s_nb);
 		if (stock_small == NULL)
-			break;
+			break ;
 		else
 		{
 			stock_small->index = i;

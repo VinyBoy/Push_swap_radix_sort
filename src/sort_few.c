@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_few.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viny <viny@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 15:52:47 by viny              #+#    #+#             */
-/*   Updated: 2023/06/20 15:10:45 by viny             ###   ########.fr       */
+/*   Updated: 2023/06/21 15:34:18 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,10 @@ void	sort_two(t_nb **stack_a)
 
 void	sort_three(t_nb **stack_a)
 {
-	int	a;
-	int	b;
-	int	c;
+	const int	a = (*stack_a)->nb;
+	const int	b = (*stack_a)->next->nb;
+	const int	c = (*stack_a)->next->next->nb;
 
-	a = (*stack_a)->nb;
-	b = (*stack_a)->next->nb;
-	c = (*stack_a)->next->next->nb;
 	if (a_is_sorted(*stack_a) == 1)
 	{
 		if (a > b && b < c && a < c)
@@ -96,25 +93,6 @@ void	sort_pa_four(t_nb **stack_a)
 		reverse_rotate(stack_a, 'a');
 	}
 	else if (i == 4)
-		rotate(stack_a, 'a');
-	else
-		ft_exit_error();
-}
-
-void	sort_pa_five(t_nb **stack_a)
-{
-	int	i;
-
-	i = return_pos(stack_a);
-	if (i == 1)
-		;
-	else if (i == 2)
-		swap(stack_a, 'a');
-	else if (i == 3)
-		sort_pa_five_moove_i_three(stack_a);
-	else if (i == 4)
-		sort_pa_five_moove_i_four(stack_a);
-	else if (i == 5)
 		rotate(stack_a, 'a');
 	else
 		ft_exit_error();
