@@ -6,15 +6,16 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:14:13 by vnieto-j          #+#    #+#             */
-/*   Updated: 2023/06/21 13:47:44 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/21 18:24:33 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_exit_error(void)
+void	ft_exit_error(t_nb **stack)
 {
 	ft_printf("Error\n");
+	ft_lstclear_ps(stack);
 	exit(EXIT_FAILURE);
 }
 
@@ -24,7 +25,7 @@ void	add_to_stack(t_nb **stack, int the_nb)
 
 	new = malloc(sizeof(t_nb));
 	if (!new)
-		ft_exit_error();
+		ft_exit_error(stack);
 	new->nb = the_nb;
 	new->index = -1;
 	new->next = NULL;
@@ -67,7 +68,7 @@ int	ft_check_argv_is_digit(char *string)
 t_nb	*ft_nb_to_stack(int argc, char **argv)
 {
 	int		i;
-	int		nb;
+	long	nb;
 	t_nb	*stack;
 
 	i = 1;
@@ -75,16 +76,16 @@ t_nb	*ft_nb_to_stack(int argc, char **argv)
 	while (i <= argc - 1)
 	{
 		if (ft_check_argv_is_digit(argv[i]) == 1)
-			ft_exit_error();
+			ft_exit_error(&stack);
 		else
 		{
-			nb = ft_atoi_ovrflw(argv[i]);
+			nb = ft_atoi_ovrflw(argv[i], &stack);
 			add_to_stack(&stack, nb);
 		}
 		i++;
 	}
 	if (ft_is_dupplicate(&stack) == 1)
-		ft_exit_error();
+		ft_exit_error(&stack);
 	put_index_stack(&stack);
 	return (stack);
 }

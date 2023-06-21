@@ -6,7 +6,7 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:41:18 by vnieto-j          #+#    #+#             */
-/*   Updated: 2023/06/21 15:39:13 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/21 18:23:16 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	return (*s1 - *s2);
 }
 
-int	ft_atoi_ovrflw(const char *string)
+int	ft_atoi_ovrflw(const char *string, t_nb **stack)
 {
 	int	res;
 	int	signe;
@@ -41,7 +41,7 @@ int	ft_atoi_ovrflw(const char *string)
 	{
 		if (res > INT_MAX / 10 || (res == INT_MAX / 10
 				&& (*string - '0') > INT_MAX % 10))
-			ft_exit_error();
+			ft_lstclear_ps(stack);
 		res = res * 10 + (*string - '0');
 		string++;
 	}

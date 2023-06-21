@@ -6,7 +6,7 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 19:07:03 by viny              #+#    #+#             */
-/*   Updated: 2023/06/21 15:34:03 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/21 17:52:02 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,5 @@ void	sort_pa_five(t_nb **stack_a)
 	else if (i == 5)
 		rotate(stack_a, 'a');
 	else
-		ft_exit_error();
+		ft_exit_error(stack_a);
 }

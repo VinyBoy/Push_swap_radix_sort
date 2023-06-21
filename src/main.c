@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viny <viny@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 17:20:07 by viny              #+#    #+#             */
-/*   Updated: 2023/06/20 15:27:15 by viny             ###   ########.fr       */
+/*   Updated: 2023/06/21 17:50:21 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	stack_a = ft_nb_to_stack(argc, argv);
 	stack_b = NULL;
 	if (!stack_a)
-		return (1);
+		ft_exit_error(&stack_a);
 	if (a_is_sorted(stack_a) == 1)
 	{
 		if (argc < 7)

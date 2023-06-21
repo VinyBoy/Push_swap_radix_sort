@@ -6,7 +6,7 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:24:05 by viny              #+#    #+#             */
-/*   Updated: 2023/06/21 13:47:25 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/21 18:23:56 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_nb
 	struct s_nb	*next;
 }	t_nb;
 
-void	ft_exit_error(void);
+void	ft_exit_error(t_nb **stack);
 void	ft_lstadd_back_ps(t_nb **lst, t_nb *new);
 void	ft_lstclear_ps(t_nb **lst);
 void	swap(t_nb **stack, char c);
@@ -55,7 +55,7 @@ void	sort_pa_five_moove_i_four(t_nb **stack_a);
 void	sort_pa_four(t_nb **stack_a);
 void	sort_pa_five(t_nb **stack_a);
 int		a_is_sorted(t_nb *stack_a);
-int		ft_atoi_ovrflw(const char *string);
+int		ft_atoi_ovrflw(const char *string, t_nb **stack);
 int		ft_strcmp(const char *s1, const char *s2);
 void	radix_sort(t_nb **stack_a, t_nb **stack_b, int argc);
 int		nb_node(t_nb *stack);
