@@ -6,7 +6,7 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:14:13 by vnieto-j          #+#    #+#             */
-/*   Updated: 2023/06/21 18:24:33 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/23 14:38:45 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	ft_check_argv_is_digit(char *string)
 t_nb	*ft_nb_to_stack(int argc, char **argv)
 {
 	int		i;
-	long	nb;
+	int		nb;
 	t_nb	*stack;
 
 	i = 1;
