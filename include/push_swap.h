@@ -6,7 +6,7 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:24:05 by viny              #+#    #+#             */
-/*   Updated: 2023/06/21 18:23:56 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/24 18:43:31 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ t_nb	*ft_nb_to_stack(int argc, char **argv);
 void	ft_sort_few(t_nb **stack_a, t_nb **stack_b, int argc);
 void	sort_two(t_nb **stack_a);
 void	sort_three(t_nb **stack_a);
-void	sort_four_five(t_nb **stack_a, t_nb **stack_b, int argc);
 int		return_pos(t_nb **stack);
 void	sort_pa_five_moove_i_three(t_nb **stack_a);
 void	sort_pa_five_moove_i_four(t_nb **stack_a);
@@ -63,5 +62,9 @@ int		ft_bits_len(int argc);
 void	print_stack(t_nb **stack_a);
 void	put_index_stack(t_nb **stack_a);
 void	put_index_stack_index(t_nb *t, t_nb **s_s, int s_nb);
+void	sort_four_five(t_nb **stack_a, t_nb **stack_b, int argc);
+void	find_small_and_pb(t_nb **stack_a, t_nb **stack_b, int argc);
+void	ft_push_index_zero(t_nb **stack_a, t_nb **stack_b, int count);
+void	ft_push_index_one(t_nb **stack_a, t_nb **stack_b, int count);
 
 #endif

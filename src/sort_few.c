@@ -6,7 +6,7 @@
 /*   By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 15:52:47 by viny              #+#    #+#             */
-/*   Updated: 2023/06/21 17:51:39 by vnieto-j         ###   ########.fr       */
+/*   Updated: 2023/06/24 18:44:31 by vnieto-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,41 +59,43 @@ void	sort_four_five(t_nb **stack_a, t_nb **stack_b, int argc)
 {
 	if (argc == 5)
 	{
-		push_b(stack_a, stack_b);
+		find_small_and_pb(stack_a, stack_b, argc);
 		sort_three(stack_a);
 		push_a(stack_a, stack_b);
-		sort_pa_four(stack_a);
 	}
-	else if (argc == 6)
+	if (argc == 6)
 	{
-		push_b(stack_a, stack_b);
-		push_b(stack_a, stack_b);
+		find_small_and_pb(stack_a, stack_b, argc);
 		sort_three(stack_a);
 		push_a(stack_a, stack_b);
-		sort_pa_four(stack_a);
 		push_a(stack_a, stack_b);
-		sort_pa_five(stack_a);
 	}
 }
 
-void	sort_pa_four(t_nb **stack_a)
+void	find_small_and_pb(t_nb **stack_a, t_nb **stack_b, int argc)
 {
-	int	i;
+	t_nb	*temp;
+	int		count;
 
-	i = return_pos(stack_a);
-	if (i == 1)
-		;
-	else if (i == 2)
-		swap(stack_a, 'a');
-	else if (i == 3)
+	count = 0;
+	temp = (*stack_a);
+	while (temp && temp != NULL)
 	{
-		reverse_rotate(stack_a, 'a');
-		swap(stack_a, 'a');
-		reverse_rotate(stack_a, 'a');
-		reverse_rotate(stack_a, 'a');
+		count++;
+		if (temp->index == 0)
+			ft_push_index_zero(stack_a, stack_b, count);
+		temp = temp->next;
 	}
-	else if (i == 4)
-		rotate(stack_a, 'a');
-	else
-		ft_exit_error(stack_a);
+	if (argc == 6)
+	{
+		count = 0;
+		temp = (*stack_a);
+		while (temp && temp != NULL)
+		{
+			count++;
+			if (temp->index == 1)
+				ft_push_index_one(stack_a, stack_b, count);
+			temp = temp->next;
+		}
+	}
 }

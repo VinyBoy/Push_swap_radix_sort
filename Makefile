@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: viny <viny@student.42.fr>                  +#+  +:+       +#+         #
+#    By: vnieto-j <vnieto-j@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/19 16:28:31 by viny              #+#    #+#              #
-#    Updated: 2023/06/13 11:18:46 by viny             ###   ########.fr        #
+#    Updated: 2023/06/24 19:17:50 by vnieto-j         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME	=	push_swap
 
 INC_DIR	=	./include/
 
-CC	=	cc 
+CC	=	cc -g3
 
 CFLAGS	=	-g -Wall -Wextra -Werror -I$(INC_DIR)
 
@@ -29,9 +29,8 @@ AUTHOR	=	vnieto-j
 LDFLAGS	=	-Llibft/Libft -lft
 
 ################################################################################
-#                                 PROGRAM'S SRCSS                               #
+#                                 PROGRAM'S SRCSS                              #
 ################################################################################
-
 
 SRC_DIR =	./src/
 
